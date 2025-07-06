@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom"
 import { set } from "react-hook-form"
 import {jwtDecode} from "jwt-decode"
 import { api } from "../components/setting/api"
+import { toast } from "react-toastify"
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false)
  const [username, setUsername] = useState("");
@@ -112,6 +113,7 @@ const handleRegister = async (e) => {
       setConfirmPassword("");
       // Chuyển sang trang đăng nhập hoặc form đăng nhập
       setIsRegistering(false);
+      toast.success("Đăng kí thành công !! Mời bạn đăng nhập")
     } else {
       console.error("Đăng ký thất bại. Vui lòng thử lại.");
     }
