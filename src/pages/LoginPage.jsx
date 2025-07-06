@@ -103,7 +103,7 @@ const handleRegister = async (e) => {
   };
 
   try {
-    const response = await api.post("/api/accounts/register", payload);
+    const response = await api.post("/api/accounts/register", payload);   
 
     if (response.data?.status === true || response.status === 200) {
       // Reset form (tuỳ ý)
